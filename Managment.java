@@ -11,19 +11,24 @@ import java.io.IOException;
 
 public class Managment {
 
+    //Creation of LMS array list
     private static ArrayList<Book> LMS = new ArrayList<Book>();
 
 
+    //an alternate method to add a book to LMS arraylist
     private void addBook(Book book){
         LMS.add(book);
     }
 
 
+    //a method to remove a book from the LMS arraylist by its ID value
     private static void removeBookByID(String id){
         //System.out.println(book.getiD());
         LMS.removeIf(book -> book.getiD().equals(id));
     }
 
+
+    //a method to print all the books in the LMS arraylist
     public static void showLMS(){
         for (Book book : LMS){
             System.out.println(book.getiD());
@@ -67,9 +72,11 @@ public class Managment {
                 fileCheck = scan.nextLine();
         }
 
+        // This creates a buffer reader to read through the comma seperated code
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath)); //"C:\\Users\\dureh\\OneDrive - Knights - University of Central Florida\\Desktop\\LMStest.txt"
 
+            // a loop to read each line of the comma sepereated data and add it as a book object to the LMS arraylist
             while((line = br.readLine()) != null) {
                 String[] reader = line.split(",");
                 //System.out.println("Book - ID = " + reader[0] + ", Title = " + reader[1] + ", Author = " + reader[2]);
