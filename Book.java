@@ -1,6 +1,6 @@
-//Dureh Wren,CEN 3024C, OCT 1st,2023
-//Software Development I
-/* The Book class is responsible for the creation of the book object parameters as well as the storage for methods to get and set values
+/*Dureh Wren,CEN 3024C, OCT 1st,2023
+*Software Development I
+* The Book class is responsible for the creation of the book object parameters as well as the storage for methods to get and set values
 of a book object*/
 
 class Book {
@@ -9,8 +9,12 @@ class Book {
     protected String title;
     protected  String author;
 
-
-    //THis method creates the parameters needed to create a book object
+    /*
+     * method: Book
+     * parameters: iD, title, author
+     * return: none
+     * purpose:THis method creates the parameters needed to create a book object
+     */
     Book(String iD, String title, String author) {
         this.iD = iD;
         this.title = title;

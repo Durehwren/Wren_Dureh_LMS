@@ -15,20 +15,35 @@ public class Managment {
     private static ArrayList<Book> LMS = new ArrayList<Book>();
 
 
-    //an alternate method to add a book to LMS arraylist
+    /*
+     * method: addBook
+     * parameters: a book object
+     * return: none
+     * an alternate method to add a book to LMS arraylist
+     */
     private void addBook(Book book){
         LMS.add(book);
     }
 
 
-    //a method to remove a book from the LMS arraylist by its ID value
+    /*
+     * method: removeBookByID
+     * parameters: a book id value as a string
+     * return: none
+     * a method to remove a book from the LMS arraylist by its ID value
+    */
     private static void removeBookByID(String id){
         //System.out.println(book.getiD());
         LMS.removeIf(book -> book.getiD().equals(id));
     }
 
 
-    //a method to print all the books in the LMS arraylist
+    /*
+     * method: showLMS
+     * parameters: none
+     * return: none
+     * a method to print all the books in the LMS arraylist
+    */
     public static void showLMS(){
         for (Book book : LMS){
             System.out.println(book.getiD());
