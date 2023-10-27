@@ -1,6 +1,7 @@
 //Dureh Wren,CEN 3024C, OCT 1st,2023
 //Software Development I
-/* The Book class is responsible for the creation of the book object parameters as well as the storage for methods to get and set values of a book object*/
+/* The Book class is responsible for the creation of the book object parameters as well as the storage for methods to get and set values
+of a book object*/
 
 class Book {
 
