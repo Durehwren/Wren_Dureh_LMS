@@ -53,10 +53,6 @@ class Book {
         return author;
     }
 
-
-
-
-
     public void setCheckedOut(boolean checkedOut) {
         this.checkedOut = checkedOut;
     }
