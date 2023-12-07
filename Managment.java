@@ -9,10 +9,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Managment {
+public class Management {
 
     //Creation of LMS array list
-    private static ArrayList<Book> LMS = new ArrayList<Book>();
+    private static final ArrayList<Book> LMS = new ArrayList<Book>();
 
 
     /*
@@ -31,7 +31,7 @@ public class Managment {
      * parameters: a book id value as a string
      * return: none
      * a method to remove a book from the LMS arraylist by its ID value
-    */
+     */
     private static void removeBookByID(String id){
         //System.out.println(Book.getiD());
         LMS.removeIf(book -> book.getiD().equals(id));
@@ -54,7 +54,7 @@ public class Managment {
      * parameters: none
      * return: none
      * a method to print all the books in the LMS arraylist
-    */
+     */
     public static void showLMS(){
         for (Book book : LMS){
             System.out.println(book.getiD());
@@ -124,7 +124,7 @@ public class Managment {
                 System.out.println("Great!");
                 checkLoop = false;
             }
-        else {
+            else {
                 System.out.println("Please reenter the file path of the document.");
 
                 filePath = scan.nextLine();
@@ -132,7 +132,7 @@ public class Managment {
                 System.out.println("Is this the file path?");
                 System.out.println("Y or N ");
                 fileCheck = scan.nextLine();
-        }
+            }
 
         // This creates a buffer reader to read through the comma seperated code
         try {
@@ -145,7 +145,7 @@ public class Managment {
                 Book book =new Book(reader[0], reader[1], reader[2], false, null );
                 LMS.add(book);
             }
-            } catch (IOException var4) {
+        } catch (IOException var4) {
             var4.printStackTrace();
         }
 
