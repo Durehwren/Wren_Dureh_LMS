@@ -8,6 +8,11 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Management {
 
@@ -101,6 +106,43 @@ public class Management {
     }
 
     public static void main(String[] args) {
+
+
+        /*String query1 = "select * from LMS";
+
+        Connection conn = null;
+        try {
+            // db parameters
+            String url = "jdbc:sqlite:C:/sqlite/LMS.db";
+            // create a connection to the database
+            conn = DriverManager.getConnection(url);
+            System.out.println("Connection to SQLite has been established.");
+
+            Statement statement =conn.createStatement();
+            ResultSet result = statement.executeQuery(query1);
+
+            while (result.next()) {
+                String LMSData = "";
+                for (int i = 1; i <= 6; i++) {
+                    LMSData += result.getString(i) + ":";
+                }
+                System.out.println(LMSData);
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }*/
+
+
 
         //1 Ask for file name, scan it, open provided file path
         //  Add book in file by scanning next line and applying values to three holder variables
